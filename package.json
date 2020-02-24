@@ -1,7 +1,7 @@
 {
-  "name": "elastic-lucid-provider",
+  "name": "elastic-general-provider",
   "version": "2.1.0",
-  "description": "Elasticsearch lucid provider for adonis js",
+  "description": "Elasticsearch lucid provider",
   "main": "Providers/ElasticLucidProvider.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
