@@ -1,6 +1,6 @@
 {
   "name": "elastic-general-provider",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Elasticsearch lucid provider",
   "main": "Providers/ElasticLucidProvider.js",
   "scripts": {
