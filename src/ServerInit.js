@@ -28,7 +28,15 @@ module.exports = (configSource) => {
     const user = connectionConfig.username
     const pass = connectionConfig.password
     if (user && pass) {
-        esConfig.httpAuth = `${user}:${pass}`
+        esConfig.auth = {
+            username: user,
+            password: pass
+        }
+    }
+    if(connectionConfig.cloudId) {
+        esConfig.cloud = {
+            id: connectionConfig.cloudId
+        }
     }
     
     ElasticAdapter.setClient(new Client(esConfig))
