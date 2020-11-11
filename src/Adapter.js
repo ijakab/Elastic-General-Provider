@@ -118,7 +118,14 @@ module.exports = {
         let elasticResponse = await promiseCall(p, true)
         return elasticResponse.responses
     },
-
+    
+    async dropIndex(index) {
+        const p = this.client.indices.delete({
+            index
+        });
+        return await promiseCall(p, true)
+    },
+    
     async updateByQuery(index, query, updateObject) {
         const p = this.client.updateByQuery({
             index,
