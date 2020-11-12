@@ -5,7 +5,6 @@ module.exports = async (promise, verbose) => {
     try {
         return await promise
     } catch (err) {
-        console.log('jesi ovdje')
         if(get(err, 'meta.meta.request.params.body._outBuffer')) delete err.meta.meta.request
         e.data = err.data
         e.message = err.message

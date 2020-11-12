@@ -33,6 +33,14 @@ module.exports = (configSource) => {
             password: pass
         }
     }
+    if (connectionConfig.apiKey && connectionConfig.apiKeyId) {
+        esConfig.auth = {
+            apiKey: {
+                id: connectionConfig.apiKeyId,
+                api_key: connectionConfig.apiKey
+            }
+        }
+    }
     if(connectionConfig.cloudId) {
         esConfig.cloud = {
             id: connectionConfig.cloudId
